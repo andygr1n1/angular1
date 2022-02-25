@@ -18,5 +18,9 @@ export class ProductsComponent implements OnInit {
 
   products: Product[] = productsData;
 
+  share(): void {
+    alert('add in my life');
+  }
+
   ngOnInit(): void {}
 }

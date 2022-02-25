@@ -2,6 +2,14 @@
   class="flex flex-col gap-5 my-20 p-5 bg-blue-100 border-blue-500 rounded-md"
 >
   <div *ngFor="let product of products">
-    {{ product.name }}
+    <a [title]="product.name + ' details'" class="cursor-pointer select-none">
+      <h3>{{ product.name }}</h3></a
+    >
+
+    <p *ngIf="product.description" class="select-none">
+      {{ product.description }}
+    </p>
+
+    <button type="button" (click)="share()" class="my-4 p-2 bg-blue-700 text-zinc-50 rounded-md">Add</button>
   </div>
 </div>
