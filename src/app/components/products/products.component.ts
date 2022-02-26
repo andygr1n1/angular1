@@ -22,5 +22,9 @@ export class ProductsComponent implements OnInit {
     alert('add in my life');
   }
 
+  onNotify() {
+    window.alert('You will be notified when the product goes on sale');
+  }
+
   ngOnInit(): void {}
 }

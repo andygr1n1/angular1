@@ -11,5 +11,7 @@
     </p>
 
     <button type="button" (click)="share()" class="my-4 p-2 bg-blue-700 text-zinc-50 rounded-md">Add</button>
+
+    <app-product-alerts [product]="product" (notify)="onNotify()"></app-product-alerts>
   </div>
 </div>

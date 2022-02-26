@@ -6,9 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopNavigationMenuComponent } from './components/top-navigation-menu/top-navigation-menu.component';
 import { ProductsComponent } from './components/products/products.component';
+import { ProductAlertsComponent } from './components/product-alerts/product-alerts.component';
 
 @NgModule({
-  declarations: [AppComponent, TopNavigationMenuComponent, ProductsComponent],
+  declarations: [AppComponent, TopNavigationMenuComponent, ProductsComponent, ProductAlertsComponent],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
