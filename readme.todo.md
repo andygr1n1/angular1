@@ -1,0 +1,1 @@
+1. to create a popover with count of added items to buy
