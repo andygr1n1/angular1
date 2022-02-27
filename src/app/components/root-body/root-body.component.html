@@ -1,0 +1,19 @@
+<div class="flex flex-col items-center" role="main">
+  <div class="flex flex-col my-10 gap-10 items-center">
+    <h1 class="font-serif text-white select-none">
+      Use really cool things with us!
+    </h1>
+    <a [title]="'buy'" [routerLink]="'/cart'">
+      <img
+        src="../../../assets/images/rocket_image.svg"
+        height="100px"
+        width="100px"
+        alt="buy"
+        class="cursor-pointer hover:animate-wiggle"
+      />
+    </a>
+  </div>
+  <div class="w-[400px]">
+    <app-products></app-products>
+  </div>
+</div>

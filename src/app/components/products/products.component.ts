@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import productsData from '../../../assets/products.json';
 
-export interface Product {
+export interface IProduct {
   id: number;
   name: string;
   price: number;
@@ -16,7 +16,7 @@ export interface Product {
 export class ProductsComponent implements OnInit {
   constructor() {}
 
-  products: Product[] = productsData;
+  products: IProduct[] = productsData;
 
   share(): void {
     alert('add in my life');

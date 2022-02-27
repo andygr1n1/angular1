@@ -8,6 +8,9 @@ import { TopNavigationMenuComponent } from './components/top-navigation-menu/top
 import { ProductsComponent } from './components/products/products.component';
 import { ProductAlertsComponent } from './components/product-alerts/product-alerts.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { RootBodyComponent } from './components/root-body/root-body.component';
+import { CartComponent } from './components/cart/cart.component';
+import { ShippingComponent } from './components/shipping/shipping.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,9 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     ProductsComponent,
     ProductAlertsComponent,
     ProductDetailsComponent,
+    RootBodyComponent,
+    CartComponent,
+    ShippingComponent,
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],

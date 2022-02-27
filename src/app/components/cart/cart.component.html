@@ -1,0 +1,8 @@
+<div>
+  <div *ngFor="let item of items_to_buy">
+    <div>{{ item.name }}: {{ item.price }}</div>
+    <div *ngFor="let shipping of shipping_data | async">
+      {{ shipping.type }}::: {{ shipping.price }}
+    </div>
+  </div>
+</div>

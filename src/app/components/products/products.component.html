@@ -1,14 +1,12 @@
-<div
-  class="flex flex-col gap-5 my-20 p-5 bg-blue-100 border-blue-500 rounded-md"
->
+<div class="flex flex-col gap-5 p-5 bg-blue-100 border-blue-500 rounded-md">
   <div *ngFor="let product of products">
-    <a 
+    <a
       [title]="product.name + ' details'"
       class="cursor-pointer select-none"
       [routerLink]="['/products', product.id]"
     >
-      <h3>{{ product.name }}</h3></a
-    >
+      <h3>{{ product.name }}</h3>
+    </a>
 
     <p *ngIf="product.description" class="select-none">
       {{ product.description }}

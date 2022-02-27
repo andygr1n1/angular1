@@ -1,1 +1,19 @@
-<p>product-details works!</p>
+<div class="bg-gray-100 h-full">
+  <div *ngIf="product">
+    <h3>{{ product.name }}</h3>
+    <h4>{{ product.price | currency: "EUR" }}</h4>
+    <p>{{ product.description }}</p>
+    <button
+      type="button"
+      (click)="addToCart(product)"
+      class="flex items-center gap-2 m-3 p-2 text-white text-base bg-blue-400 rounded-md transition-colors hover:bg-blue-800"
+    >
+      Buy
+      <span class="material-icons-outlined !text-xl"> shopping_basket </span>
+    </button>
+
+    <p>
+      <a routerLink="/shipping" target="_blank">Shipping Prices</a>
+    </p>
+  </div>
+</div>

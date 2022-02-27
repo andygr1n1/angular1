@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class TopNavigationMenuComponent implements OnInit {
   constructor() {}
 
-  logo_name = 'Welcome to golden age';
+  logo_name = 'Angular shop';
 
   ngOnInit(): void {}
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Product } from '../products/products.component';
+import { IProduct } from '../products/products.component';
 
 @Component({
   selector: 'app-product-alerts',
@@ -7,7 +7,7 @@ import { Product } from '../products/products.component';
   styleUrls: ['./product-alerts.component.scss'],
 })
 export class ProductAlertsComponent implements OnInit {
-  @Input() product: Product | undefined;
+  @Input() product: IProduct | undefined;
   constructor() { }
   
 
