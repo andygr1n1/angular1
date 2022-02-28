@@ -2,14 +2,13 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { IProduct } from '../products/products.component';
 
 @Component({
-  selector: 'app-product-alerts',
-  templateUrl: './product-alerts.component.html',
-  styleUrls: ['./product-alerts.component.scss'],
+  selector: 'app-product-discounts',
+  templateUrl: './product-discounts.component.html',
+  styleUrls: ['./product-discounts.component.scss'],
 })
-export class ProductAlertsComponent implements OnInit {
+export class ProductDiscountsComponent implements OnInit {
   @Input() product: IProduct | undefined;
-  constructor() { }
-  
+  constructor() {}
 
   @Output() notify = new EventEmitter();
 

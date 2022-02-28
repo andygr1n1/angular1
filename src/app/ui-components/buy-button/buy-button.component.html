@@ -1,0 +1,9 @@
+<button
+  *ngIf="product"
+  type="button"
+  (click)="addToCart(product)"
+  class="flex items-center justify-center min-w-[200px] gap-2 my-3 p-2 text-white text-base bg-blue-700 rounded-md transition-colors hover:shadow-lg hover:shadow-blue-700"
+>
+  Buy
+  <span class="material-icons-outlined !text-xl"> shopping_basket </span>
+</button>

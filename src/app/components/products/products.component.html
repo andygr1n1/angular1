@@ -1,5 +1,7 @@
-<div class="flex flex-col gap-5 p-5 bg-blue-100 border-blue-500 rounded-md">
-  <div *ngFor="let product of products">
+<div
+  class="flex flex-col gap-10 p-5 bg-blue-100 border-blue-500 rounded-md overflow-y-auto h-[500px]"
+>
+  <div *ngFor="let product of products" class="border-b border-blue-500">
     <a
       [title]="product.name + ' details'"
       class="cursor-pointer select-none"
@@ -11,18 +13,29 @@
     <p *ngIf="product.description" class="select-none">
       {{ product.description }}
     </p>
-
-    <button
-      type="button"
-      (click)="share()"
-      class="my-4 p-2 bg-blue-700 text-zinc-50 rounded-md"
+    <p *ngIf="product.price" class="select-none">
+      {{ product.price | currency: "EUR" }}
+    </p>
+    <a
+      [title]="product.name + ' details'"
+      class="cursor-pointer select-none"
+      [routerLink]="['/products', product.id]"
     >
-      Add
-    </button>
+      <p
+        class="font-bold select-nont hover:text-blue-700 cursor-pointer transition-colors"
+      >
+        more...
+      </p>
+    </a>
 
-    <app-product-alerts
+    <div class="flex items-center justify-between">
+      <app-buy-button [product]="product"></app-buy-button>
+      <app-favorites-button></app-favorites-button>
+    </div>
+
+    <app-product-discounts
       [product]="product"
       (notify)="onNotify()"
-    ></app-product-alerts>
+    ></app-product-discounts>
   </div>
 </div>

@@ -11,6 +11,8 @@ import { CartService } from 'src/app/cart.service';
 })
 export class ProductDetailsComponent implements OnInit {
   product: IProduct | undefined;
+  shipping_info = false;
+  shipping_data = this.cartService.getShippingPrices();
 
   constructor(
     private route: ActivatedRoute,
@@ -20,6 +22,10 @@ export class ProductDetailsComponent implements OnInit {
   addToCart(product: IProduct) {
     this.cartService.addToCart(product);
     window.alert('Your product has been added to the cart!');
+  }
+
+  toggleShippingPrices(): void {
+    this.shipping_info = !this.shipping_info;
   }
 
   ngOnInit(): void {

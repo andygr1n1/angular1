@@ -3,17 +3,29 @@
     <h3>{{ product.name }}</h3>
     <h4>{{ product.price | currency: "EUR" }}</h4>
     <p>{{ product.description }}</p>
-    <button
-      type="button"
-      (click)="addToCart(product)"
-      class="flex items-center gap-2 m-3 p-2 text-white text-base bg-blue-400 rounded-md transition-colors hover:bg-blue-800"
-    >
-      Buy
-      <span class="material-icons-outlined !text-xl"> shopping_basket </span>
-    </button>
+    <app-buy-button [product]="product"></app-buy-button>
 
-    <p>
-      <a routerLink="/shipping" target="_blank">Shipping Prices</a>
+    <p
+      *ngIf="!shipping_info; else hideShippingInfo"
+      (click)="toggleShippingPrices()"
+      class="cursor-pointer hover:text-blue-700"
+    >
+      Show shipping Prices
     </p>
+
+    <ng-template #hideShippingInfo
+      ><p
+        (click)="toggleShippingPrices()"
+        class="cursor-pointer hover:text-blue-700"
+      >
+        Hide shipping Prices
+      </p></ng-template
+    >
+
+    <div *ngIf="shipping_info">
+      <div *ngFor="let shipping of shipping_data | async">
+        {{ shipping.type }}::: {{ shipping.price }}
+      </div>
+    </div>
   </div>
 </div>
