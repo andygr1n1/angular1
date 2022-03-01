@@ -13,6 +13,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { ShippingComponent } from './components/shipping/shipping.component';
 import { BuyButtonComponent } from './ui-components/buy-button/buy-button.component';
 import { FavoritesButtonComponent } from './ui-components/favorites-button/favorites-button.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,12 @@ import { FavoritesButtonComponent } from './ui-components/favorites-button/favor
     BuyButtonComponent,
     FavoritesButtonComponent,
   ],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
